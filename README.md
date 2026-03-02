@@ -1,6 +1,6 @@
 # se-research-skills
 
-A collection of Claude Code skills for software engineering research paper workflows.
+A collection of Agent skills for software engineering research paper workflows.
 
 ## Skills
 
