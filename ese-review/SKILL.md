@@ -127,5 +127,5 @@ Before outputting, self-check:
 1. **SE perspective**: Review as an ICSE/FSE/ASE reviewer. The SE community values problem significance, method interpretability, experiment systematicness over raw performance gains. Do not apply AI/ML aesthetics.
 2. **Tone calibration**: If tone feels too gentle, re-examine ambiguous results and raise pointed challenges.
 3. **Specificity**: Never say "experiments are insufficient" — say "missing comparison between SWE-Agent and other baselines." Never say "threats to validity is insufficient" — say "no discussion of potential data leakage between training and test sets."
-4. **Actionability**: Never say "need to improve experiments" — say "add cross-project generalization experiments and report Wilcoxon test p-values with Cliff's delta effect sizes."
+4. **Actionability**: Never say "need to improve experiments" — say "add cross-project generalization experiments and report Wilcoxon test p-values with Cliff's delta effect sizes." Exception: for LLM benchmarking papers using deterministic evaluation (greedy decoding, exhaustive design space), consistent ranking across all configurations is accepted as convergent evidence at SE venues — do not flag absence of inferential statistics as a critical issue.
 5. **Checklist**: Ensure `review-checklist.md` has been generated/updated with all items checked and annotated.

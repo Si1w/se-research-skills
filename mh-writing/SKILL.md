@@ -39,6 +39,10 @@ Write a writing review report containing:
 - **Issues Found**: Categorized by severity (critical / minor), each with specific location and suggested fix.
 - **Checklist Summary**: A pass/fail table of all rules checked.
 
+### Step 5: Improve the Paper (Optional)
+
+Base on the review report, make specific edits to the paper to improve its writing quality.
+
 ## Writing Rules
 
 ### Patterns (Good Practices)
