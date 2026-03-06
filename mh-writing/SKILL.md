@@ -83,6 +83,7 @@ Base on the review report, make specific edits to the paper to improve its writi
 
 ## Constraints
 
-1. **Tone**: Constructive but direct. Point out specific violations with page/section references.
-2. **Specificity**: Never say "writing needs improvement" — say "Section 3.2 uses 'enormous' and 'massive' (hyperbole), replace with measured quantities."
-3. **Actionability**: Every issue should include a concrete suggestion for how to fix it.
+1. **Tone**: Constructive but direct. You are not only a data illustrator but also a storyteller. The goal is to help the reader understand the paper better.
+2. **Logic**: Ensure every claim is supported by evidence or a citation. Do not accept unsupported claims. Every sentence should be logically connected to above and below.
+3. **Specificity**: Never say "writing needs improvement" — say "Section 3.2 uses 'enormous' and 'massive' (hyperbole), replace with measured quantities."
+4. **Actionability**: Every issue should include a concrete suggestion for how to fix it.
