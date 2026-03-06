@@ -167,6 +167,7 @@ If the user asks for revisions (or if the review reveals issues that benefit fro
 6. **Words that cannot start a sentence** — "or", "and", "then", "also" should not begin sentences in formal writing.
 7. **Gender-neutral language** — Avoid "he" as default pronoun. Use "they" or rephrase.
 8. **Avoid over-emphasis** — Italics and bold used sparingly. When everything is emphasised, nothing is.
+9. **Limit dashes in prose** — A paragraph with multiple em-dashes (—) or parenthetical asides becomes hard to follow. One dash per paragraph is fine for emphasis or an aside; two or more signals that the sentence structure needs rethinking. Rewrite as separate sentences or use commas instead.
 
 ## Constraints
 
