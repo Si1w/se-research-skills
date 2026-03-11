@@ -18,11 +18,13 @@ Based on the [Empirical Standards Reference](#empirical-standards-reference), de
 - `literature-review/` — systematic-review, case-survey
 - `other/` — replication, meta-science
 
+A paper may use multiple research methods (e.g., mining repositories then running a controlled experiment). Identify all applicable types and read the corresponding standards for each — evaluate the paper against all of them based on the weight each method carries in the study.
+
 ### Step 2: Read Applicable Standards
 
 Read from `references/`:
 1. `general/general-standard.md` (always required)
-2. The matched specific standard file(s)
+2. The matched specific standard file(s) — if the paper spans multiple types, read each one
 
 ### Step 3: Generate or Load Review Checklist
 
@@ -63,6 +65,13 @@ Based on Step 4 results, write a review report containing:
 - **Weaknesses (Critical)**: 3–5 fatal issues that could lead to rejection (e.g. missing baselines, insufficient dataset representativeness, superficial validity discussion, methodology not meeting empirical standards).
 - **Minor Issues**: 2–3 non-fatal issues affecting quality (e.g. poor chart readability, incomplete related work, unclear writing).
 - **Questions for Authors**: 2–3 key questions the authors must answer in rebuttal.
+- **Recommendation**: One of: Strong Accept / Accept / Weak Accept / Borderline / Weak Reject / Reject / Strong Reject, with a one-sentence justification.
+
+How checklist results map to the recommendation:
+- Missing **essential** attributes → typically Reject or Weak Reject, unless the contribution is exceptionally strong in other dimensions.
+- All essential met, most desirable met → Accept range.
+- All essential met, few desirable met → Borderline to Weak Accept.
+- Any extraordinary attributes met → factor positively into the recommendation.
 
 ## Constraints
 
@@ -75,6 +84,7 @@ Based on Step 4 results, write a review report containing:
   - **Novelty** — new insights or methods, differentiated from prior work
   - **Significance** — important problem, meaningful impact
   - **Clarity** — well-written, well-organized, easy to follow
+  - **Reproducibility** — data availability, replication package, open science practices (code, scripts, raw results). Absence is not fatal but should be noted as a weakness, especially for empirical studies where independent verification matters.
 
 ## Empirical Standards Reference
 
@@ -127,5 +137,5 @@ Before outputting, self-check:
 1. **SE perspective**: Review as an ICSE/FSE/ASE reviewer. The SE community values problem significance, method interpretability, experiment systematicness over raw performance gains. Do not apply AI/ML aesthetics.
 2. **Tone calibration**: If tone feels too gentle, re-examine ambiguous results and raise pointed challenges.
 3. **Specificity**: Never say "experiments are insufficient" — say "missing comparison between SWE-Agent and other baselines." Never say "threats to validity is insufficient" — say "no discussion of potential data leakage between training and test sets."
-4. **Actionability**: Never say "need to improve experiments" — say "add cross-project generalization experiments and report Wilcoxon test p-values with Cliff's delta effect sizes." Exception: for LLM benchmarking papers using deterministic evaluation (greedy decoding, exhaustive design space), consistent ranking across all configurations is accepted as convergent evidence at SE venues — do not flag absence of inferential statistics as a critical issue.
+4. **Actionability**: Never say "need to improve experiments" — say "add cross-project generalization experiments and report Wilcoxon test p-values with Cliff's delta effect sizes."
 5. **Checklist**: Ensure `review-checklist.md` has been generated/updated with all items checked and annotated.
