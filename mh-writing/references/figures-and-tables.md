@@ -8,6 +8,7 @@ Figures and tables are "boxouts" — elements that stand out when a referee flic
 
 ### Figures
 - Must be readable when reduced to fit the column/page width. Increase point size of labels (axis labels, legends) relative to figure size.
+- All text within figures (axis labels, tick marks, legend entries, annotations) must be clearly legible when printed on A4 paper at the final layout size. If any text requires squinting or zooming, the font size is too small. As a rule of thumb, no text in a figure should be smaller than the caption font size.
 - Use vector formats (PDF, SVG) over raster formats (PNG, JPG) whenever possible.
 - Captions go below the figure.
 
@@ -22,6 +23,7 @@ Figures and tables are "boxouts" — elements that stand out when a referee flic
 
 - **Self-contained captions**: Every figure and table must be understandable from its caption alone. A referee flicking through the paper should be able to understand what each figure shows without reading the surrounding text.
 - **Referenced in text**: Every figure and table must be referenced and discussed in the body text. An unreferenced figure is a wasted figure.
+- **Every element explained**: Every axis, column, row label, legend entry, symbol, abbreviation, and data series in a figure or table must be explicitly explained, either in the caption or in the surrounding text. If a table has a column called "Δ" or "Config.", the reader should never have to guess what it means. Unexplained elements signal carelessness and invite referee skepticism.
 - **Connected to RQs**: Each figure/table in the results section should clearly map to a research question.
 
 ## Common Pitfalls
@@ -43,5 +45,6 @@ Figures and tables are "boxouts" — elements that stand out when a referee flic
 - [ ] Units are in column headings, not in rows
 - [ ] Paper is understandable in black and white
 - [ ] No decorative visual elements that do not encode data (SIP)
+- [ ] Every axis, column, legend entry, and symbol is explained in caption or text
 - [ ] Results figures/tables map to research questions
 - [ ] No unnecessary repetition in table rows

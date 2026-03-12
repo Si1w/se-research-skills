@@ -26,6 +26,7 @@ A first-tier venue referee may be reviewing 15–25 papers in a short period. Th
 | Proposed Solution | `references/proposed-solution.md` |
 | Experimental Setup | `references/experimental-setup.md` |
 | Results | `references/results.md` |
+| Discussion | `references/discussion.md` |
 | Threats to Validity | `references/threats-to-validity.md` |
 | Conclusion | `references/conclusion.md` |
 | Figures and Tables | `references/figures-and-tables.md` |
@@ -107,6 +108,8 @@ If the current paragraph breaks these mappings, point it out.
 
 12. **Overclaiming** — Claiming more than the evidence supports. "Our approach solves the problem of X" when it only addresses a subset. "First to do X" without thorough literature search. Referees are trained to spot the gap between what is claimed and what is shown — overclaiming is one of the fastest ways to lose credibility and invite rejection.
 
+13. **Undefined terminology** — Every technical term, acronym, or domain-specific concept must be defined or explained before or at its first use. If a term appears without prior context, add a brief definition or parenthetical explanation. Readers should never have to guess what a term means. This applies equally to well-known abbreviations (e.g., LLM, AST) since not every reviewer shares the same background.
+
 ### Grammar Rules
 
 1. **No contractions** — "Do not" not "Don't", "is not" not "isn't".
@@ -117,7 +120,7 @@ If the current paragraph breaks these mappings, point it out.
 6. **Words that cannot start a sentence** — "or", "and", "then", "also" should not begin sentences in formal writing.
 7. **Gender-neutral language** — Avoid "he" as default pronoun. Use "they" or rephrase.
 8. **Avoid over-emphasis** — Italics and bold used sparingly. When everything is emphasised, nothing is.
-9. **Limit dashes in prose** — A paragraph with multiple em-dashes (—) or parenthetical asides becomes hard to follow. One dash per paragraph is fine for emphasis or an aside; two or more signals that the sentence structure needs rethinking. Rewrite as separate sentences or use commas instead.
+9. **Avoid dashes in prose** — Do not use em-dashes (—) or en-dashes (–) as substitutes for proper sentence structure. Academic prose should flow through complete, connected sentences. Instead of inserting a dash to squeeze in an aside, rewrite as a separate sentence, use a comma, or restructure with subordinate clauses. Dashes signal informal or rushed writing and break the reader's flow.
 
 ## Constraints
 
