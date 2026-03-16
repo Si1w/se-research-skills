@@ -32,12 +32,10 @@ This skill supports two broad categories of figures:
 
 ## Output Destination
 
-The user's PhD vault is at `~/Desktop/PhD/`. Each project is a subfolder (e.g., `~/Desktop/PhD/chunk/`).
-
 When generating a diagram:
-1. Save the `.excalidraw.md` file to the project folder: `~/Desktop/PhD/<project>/<name>.excalidraw.md`
+1. Save the `.excalidraw.md` file to the project folder: `<project>/<name>.excalidraw.md`
 2. The Excalidraw plugin auto-exports SVG to the same folder (configured via frontmatter)
-3. Append an embed link to the project's main proposal document (e.g., `chunk.md`):
+3. Append an embed link to the project's main proposal document (e.g., `<project>.md`):
    ```
    ![[<name>.svg]]
    ```
