@@ -1,6 +1,12 @@
 ---
 name: git-push
 description: Pushes the current branch to the remote repository.
+hooks:
+  PreToolUse:
+    - matcher: Bash
+      hooks:
+        - type: command
+          command: $HOME/.claude/skills/git-push/scripts/pre-push-check.sh
 ---
 
 # Git Push Procedure
