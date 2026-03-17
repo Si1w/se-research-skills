@@ -5,11 +5,34 @@ description: Propose a research project in software engineering or Agent-based s
 
 # Research Proposal
 
-Help the user turn a vague research idea into a concrete, feasible project proposal through interactive dialogue, then output a structured document based on `reference/template.md`.
+Help the user turn a vague research idea into a concrete, feasible project proposal through interactive dialogue, then output a structured document as an Obsidian note.
+
+## Obsidian CLI
+
+This skill uses the Obsidian CLI (`obsidian` command) to interact with the user's vault — reading existing notes for context, searching for related material, creating the proposal note, and opening it for review. This keeps all research proposals organized within the vault alongside related notes and references.
+
+**Prerequisites:** Obsidian must be running, and the CLI must be registered (Settings → General → Command line interface → Register CLI). Run `obsidian help` to verify.
+
+**Vault targeting:** If the user has multiple vaults, pass `vault="<name>"` as the first parameter to every command. Ask the user which vault to use if unclear.
+
+### Key commands
+
+| Task | Command |
+|------|---------|
+| Read a note | `obsidian read file="Note Name"` or `obsidian read path="folder/note.md"` |
+| Search vault | `obsidian search query="keyword" limit=10` |
+| Create a note | `obsidian create name="Proposal Title" content="..." silent` |
+| Append to a note | `obsidian append path="folder/note.md" content="..."` |
+| Open a note | `obsidian open path="folder/note.md"` |
+| Set frontmatter | `obsidian property:set name="tags" value="research-proposal" path="note.md"` |
+
+Use `silent` to prevent the file from opening during intermediate steps. Use `--copy` to pipe output to clipboard.
 
 ## Phase 1: Brainstorming
 
 Start by understanding the user's rough idea. Ask targeted questions to progressively sharpen it — don't try to extract everything at once. A natural conversation flow matters more than a rigid interview.
+
+If the user references existing notes in their vault, use `obsidian read` to fetch the content. Use `obsidian search` to find related material they may have already written.
 
 Key things to uncover through dialogue:
 
@@ -28,8 +51,12 @@ Throughout the conversation, actively push back on ideas that seem infeasible, o
 
 Before investing more effort, search for existing work that overlaps with the proposed idea. This is about avoiding wasted effort, not about novelty claims (that comes later when writing the paper).
 
-1. Search arxiv, Google Scholar, or relevant venues (ICSE, FSE, ASE, ISSTA, MSR, etc.) for closely related work.
-2. Report findings honestly:
+1. Search the user's vault first for any prior notes on the topic:
+   ```bash
+   obsidian search query="<topic keywords>" limit=10
+   ```
+2. Search arxiv, Google Scholar, or relevant venues (ICSE, FSE, ASE, ISSTA, MSR, etc.) for closely related work.
+3. Report findings honestly:
    - If there's significant overlap: flag it clearly and discuss with the user whether to pivot, narrow the scope, or differentiate the approach.
    - If the space is relatively open: confirm this and move on.
    - If there's partial overlap: explain what's been done and what gap remains.
@@ -38,7 +65,20 @@ Do not skip this step — discovering a duplicate after months of work is costly
 
 ## Phase 3: Structured Output
 
-Once the idea is sufficiently clear and validated, read `reference/template.md` and produce a complete proposal document. Save it to the user's working directory.
+Once the idea is sufficiently clear and validated, read `reference/template.md` and produce a complete proposal document. Create it as an Obsidian note via CLI:
+
+```bash
+obsidian create name="<Project Name>" content="<proposal content>" silent
+obsidian property:set name="tags" value="research-proposal" path="<Project Name>.md"
+obsidian open file="<Project Name>"
+```
+
+For long proposals, create the note first and then append sections incrementally:
+```bash
+obsidian create name="<Project Name>" content="# <Project Name>" silent
+obsidian append file="<Project Name>" content="\n## TODO List\n\n..."
+obsidian append file="<Project Name>" content="\n## Introduction\n\n..."
+```
 
 Fill in each section with concrete content based on the brainstorming. Where information is still missing or ambiguous, insert a clearly marked `[TODO: ...]` placeholder explaining what needs to be resolved — do not fill gaps with vague generic text.
 
@@ -53,6 +93,12 @@ Section guidance:
 - **Experiment Setup**: Design experiments that can actually be run with available resources. Specify datasets, baselines, metrics, and evaluation criteria. Be realistic about what's achievable.
 - **Results**: Leave as `[TODO: to be filled after experiments]`.
 - **Discussion**: Anticipate limitations and threats to validity. Identify what could go wrong and how to mitigate it.
+
+## After Generation
+
+1. Report the note name and vault location
+2. The note is already opened in Obsidian (via `obsidian open`)
+3. Ask if any sections need revision or expansion
 
 ## Constraints
 

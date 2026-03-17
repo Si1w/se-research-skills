@@ -28,7 +28,10 @@ This skill supports two broad categories of figures:
 
 4. **Generate the Excalidraw JSON** following the design rules below.
 
-5. **Save files and embed** — save the `.excalidraw.md` to the project folder and embed it in the proposal document.
+5. **Save files and embed** — write the `.excalidraw.md` to the project folder (direct file write, not CLI — the Excalidraw format requires it). Embed the SVG in the proposal document. Then open the diagram for preview:
+   ```bash
+   obsidian open path="<project>/<name>.excalidraw.md"
+   ```
 
 ## Output Destination
 
@@ -142,9 +145,8 @@ See `references/excalidraw-schema.md` for all element fields and binding syntax.
 
 ## After Generation
 
-Report to the user:
 1. What the diagram shows and the design rationale
 2. File save location
-3. Remind them to open in Obsidian → switch to Excalidraw view
+3. The diagram has been opened in Obsidian via CLI — remind the user to switch to Excalidraw view if needed
 4. The SVG will auto-export to the same folder
 5. Ask if any adjustments are needed (layout, grouping, labels, colors)
