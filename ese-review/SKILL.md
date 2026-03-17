@@ -63,7 +63,7 @@ Based on Step 4 results, write a review report containing:
 - **Summary**: One-sentence core summary.
 - **Strengths**: 1–2 genuinely valuable contributions.
 - **Weaknesses (Critical)**: 3–5 fatal issues that could lead to rejection (e.g. missing baselines, insufficient dataset representativeness, superficial validity discussion, methodology not meeting empirical standards).
-- **Minor Issues**: 2–3 non-fatal issues affecting quality (e.g. poor chart readability, incomplete related work, unclear writing).
+- **Minor Issues**: 2–3 non-fatal issues affecting quality (e.g. poor chart readability, incomplete background/related work, unclear writing).
 - **Questions for Authors**: 2–3 key questions the authors must answer in rebuttal.
 - **Recommendation**: One of: Strong Accept / Accept / Weak Accept / Borderline / Weak Reject / Reject / Strong Reject, with a one-sentence justification.
 

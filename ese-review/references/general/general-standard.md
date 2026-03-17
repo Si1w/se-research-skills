@@ -52,8 +52,8 @@ Before beginning to review a paper, assigned reviewers should verify the followi
 ### Desirable Attributes
 
 - states epistemological stance2
-- summarizes and synthesizes a reasonable selection of related work (not every single relevant study)
-- clearly describes relationship between contribution(s) and related work
+- summarizes and synthesizes a reasonable selection of background/related work (not every single relevant study)
+- clearly describes relationship between contribution(s) and background/related work
 - demonstrates appropriate statistical power (for quantitative work) or saturation (for qualitative work)
 - describes reasonable attempts to investigate or mitigate limitations
 - discusses study’s realism, assumptions and sensitivity of the results to its realism/assumptions
@@ -123,5 +123,5 @@ Reviewers evaluate a manuscripts’ trustworthiness, importance and clarity. The
 - Reporting—together in one paper—several immature or disjointed studies instead of one fully-developed study.
 - Unnecessarily dividing the presentation of a single study into many papers (salami-slicing).
 - Overreaching conclusions or generalizations; obfuscating, downplaying or dismissing a study’s limitations.
-- Mentioning related work only to dismiss it as irrelevant; listing rather than synthesizing related work.
+- Mentioning background/related work only to dismiss it as irrelevant; listing rather than synthesizing background/related work.
 - Acknowledging limitations but then writing implications and conclusions as though the limitations don’t exist.

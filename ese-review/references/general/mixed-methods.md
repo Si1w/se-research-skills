@@ -26,7 +26,7 @@ This standard applies to software engineering studies that use two ir more data 
 - describes and justifies sample reuse (or no reuse, or partial reuse) across methods
 - illustrates the research design using a visual model (diagram)
 - indicates the use of multiple methods or mixed method design in the title
-- (for mixed-methods) includes, in the literature review, a mixture of quantitative, qualitative, and mixed methods related work
+- (for mixed-methods) includes, in the literature review, a mixture of quantitative, qualitative, and mixed methods background/related work
 - distinguishes the additional value from using a multi-methodology or mixed method design in terms of corroboration, complementarity, and expansion (breadth and depth)
 - discusses discrepancies and incongruent findings from the use of multiple methods
 - describes the main philosophical, epistemological, and/or theoretical foundations that the authors use and relate those to the planned use of multi or mixed methods in the study

@@ -20,7 +20,7 @@ This standard applies to papers that provide analysis of one or more methodologi
 
 ### Desirable Attributes
 
-- synthesizes related work from reference disciplines
+- synthesizes background/related work from reference disciplines
 - provides insight specifically for software engineering; goes beyond summarizing methodological guidance from existing works or reference disciplines;
 - results integrated back into prior theory or research
 - develops helpful artifacts (e.g. checklists, templates, tests, tools, sets of criteria)

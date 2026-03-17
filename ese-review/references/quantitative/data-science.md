@@ -36,7 +36,7 @@ Applies to studies that primarily analyze existing software phenomena using pred
 - provides a replication package including source code and data set(s), or if data cannot be shared, synthetic data to illustrate the use of the algorithms6
 - data is processed by multiple learners, of different types7
 - data is processed multiple times with different, randomly selected, training/test examples; the results of which are compared via significance tests and effect size tests (e.g. cross-validation)
-- carefully selects the hyperparameters that control the data miners (e.g. via analysis of settings in related work or some automatic hyperparameter optimizer such as grid search)
+- carefully selects the hyperparameters that control the data miners (e.g. via analysis of settings in background/related work or some automatic hyperparameter optimizer such as grid search)
 - manually inspects some non-trivial portion of the data (i.e. data sanity checks)
 - clearly distinguishes evidence-based results from interpretations and speculation8
 
