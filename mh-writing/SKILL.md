@@ -1,6 +1,6 @@
 ---
 name: mh-writing
-description: Help write and improve SE research papers paragraph by paragraph, based on Mark Harman's guidelines. Use this skill whenever a user asks to write, draft, revise, or polish a paragraph or section of a software engineering research paper. Also trigger for requests like "help me write this paragraph", "improve this section", "polish my abstract", "Harman guidelines", or any SE paper drafting/editing task.
+description: Help write and improve SE research papers paragraph by paragraph, based on Mark Harman's guidelines. Use this skill whenever a user asks to write, draft, revise, or polish a paragraph or section of a software engineering research paper. Also trigger for requests like "help me write this paragraph", "improve this section", "polish my abstract", "Harman guidelines", or any SE paper drafting/editing task. Also use this skill when the user wants to trim, shorten, compress, or tighten LaTeX text (reduce word count), or expand, enrich, flesh out, or pad LaTeX text (increase word count), even for small adjustments of ~5-15 words.
 ---
 
 # SE Paper Writing Assistant (Harman Style)
@@ -82,6 +82,8 @@ If the current paragraph breaks these mappings, point it out.
 
 8. **Use space wisely** — The paper should look like it was a struggle to fit everything in (but not cramped). No wasted white space. A paper with generous whitespace signals that the authors did not have enough to say.
 
+9. **Plain, consistent vocabulary** — Prefer simple words over ornate ones. Use the same term for the same concept throughout the paper. Variation for its own sake ("fault localization" / "bug finding" / "defect detection") confuses readers. Define each term once and reuse it.
+
 ### Anti-Patterns (Things to Avoid)
 
 1. **Prose-less sections** — Sections that jump straight to a subsection with no introductory prose. This is jarring and signals that the author has not thought about the narrative flow between sections.
@@ -110,6 +112,20 @@ If the current paragraph breaks these mappings, point it out.
 
 13. **Undefined terminology** — Every technical term, acronym, or domain-specific concept must be defined or explained before or at its first use. If a term appears without prior context, add a brief definition or parenthetical explanation. Readers should never have to guess what a term means. This applies equally to well-known abbreviations (e.g., LLM, AST) since not every reviewer shares the same background.
 
+14. **AI vocabulary clusters** — Words like "Additionally", "delve", "crucial", "landscape", "tapestry", "underscore", "foster", "showcase", "pivotal", "intricate" are individually fine but cluster unnaturally in AI-generated text. If 3+ appear in one paragraph, rewrite with plainer alternatives. (Full catalogue in the `humanizer` skill.)
+
+15. **Superficial -ing connectors** — "highlighting", "underscoring", "showcasing", "emphasizing", "fostering", "symbolizing". These create an illusion of analysis without substance — they assert a relationship without explaining it. State the actual causal or logical connection instead.
+
+16. **Rule of three** — LLMs default to grouping ideas in threes to appear comprehensive ("accuracy, efficiency, and scalability"). List exactly as many items as the evidence supports — no more, no fewer. Two is fine. Four is fine. Forcing three is a tell.
+
+17. **Synonym cycling** — Alternating "fault localization", "bug finding", "defect detection" for the same concept within a paragraph. Academic writing requires consistent terminology — pick one term and stick with it. Variation for its own sake confuses readers and signals machine generation.
+
+18. **Filler phrases** — "In order to" → "To". "Due to the fact that" → "Because". "It is important to note that" → delete. "plays a crucial role in" → rewrite with specifics. "has the ability to" → "can". These waste the referee's time and inflate word count without adding information.
+
+19. **Negative parallelisms** — "Not only...but also...", "It's not just about..., it's...". These are rhetorical flourishes that pad prose. Rewrite directly: "Our tool not only detects bugs but also suggests fixes" → "Our tool detects bugs and suggests fixes."
+
+20. **Generic conclusions** — "The future looks bright", "Exciting developments lie ahead", "opens new avenues". End sections with concrete next steps, specific open problems, or quantified implications — not hand-waving optimism.
+
 ### Grammar Rules
 
 1. **No contractions** — "Do not" not "Don't", "is not" not "isn't".
@@ -121,6 +137,56 @@ If the current paragraph breaks these mappings, point it out.
 7. **Gender-neutral language** — Avoid "he" as default pronoun. Use "they" or rephrase.
 8. **Avoid over-emphasis** — Italics and bold used sparingly. When everything is emphasised, nothing is.
 9. **Avoid dashes in prose** — Do not use em-dashes (—) or en-dashes (–) as substitutes for proper sentence structure. Academic prose should flow through complete, connected sentences. Instead of inserting a dash to squeeze in an aside, rewrite as a separate sentence, use a comma, or restructure with subordinate clauses. Dashes signal informal or rushed writing and break the reader's flow.
+
+## Trim & Expand Mode
+
+When the user asks to **trim** (shorten, compress, tighten) or **expand** (enrich, flesh out, pad) a LaTeX passage, switch to this mode. These are surgical micro-edits — the goal is a small word-count change (~5-15 words), not a rewrite.
+
+### Trim
+
+Reduce word count through two techniques:
+
+1. **Syntactic compression**: Convert clauses to phrases, passive to active voice when shorter.
+   - "which is used for detecting" → "for detecting"
+   - "was performed by the authors" → "we performed" (if first-person is already used)
+
+2. **Filler removal**: Drop words that add no meaning.
+   - "in order to" → "to"
+   - "it is worth noting that" → delete entirely
+   - "a total of 500 samples" → "500 samples"
+   - "due to the fact that" → "because"
+
+### Expand
+
+Add depth through three techniques:
+
+1. **Surface implicit reasoning**: Make conclusions, premises, or causal links that the author left implicit into explicit text. Only add inferences that follow directly — never fabricate data or claims.
+   - "The model achieves 92\% accuracy on the test set." → "The model achieves 92\% accuracy on the test set, indicating that the learned representations generalize beyond the training distribution."
+
+2. **Strengthen logical connections**: Add transition words that clarify sentence relationships (cause-and-effect, contrast, consequence). Only where the relationship is genuinely unclear without them.
+
+3. **Upgrade precision**: Replace vague descriptions with more precise academic phrasing, when doing so adds informational value (not just syllables).
+   - "is better than" → "consistently outperforms"
+
+### Rules for both modes
+
+- Do not restructure paragraphs, merge or split sentences unnecessarily, or rewrite from scratch. The result should be recognizably the same text.
+- Preserve all technical terms, numerical values, math formulas (`$...$`), LaTeX commands, and qualifying conditions exactly as-is.
+- Keep LaTeX source clean: no bold, no italics, no quotation marks not in the original. Avoid introducing em-dashes. Do not convert prose into bullet lists. Escape special characters properly.
+- **Scope check**: Count the word difference. For trim, if more than ~20 words were removed, review — something substantive was probably lost. For expand, if more than ~20 words were added, review — something is probably filler. The sweet spot is 5-15 words.
+
+### Output format (trim & expand only)
+
+Produce exactly three parts, nothing else — no greetings, no extra commentary.
+
+**Part 1 [LaTeX]**
+The trimmed/expanded English LaTeX code only.
+
+**Part 2 [Translation]**
+A literal Chinese translation, so the user can quickly verify information integrity.
+
+**Part 3 [Modification Log]**
+A brief Chinese log listing each change (e.g., deleted filler "XXX", surfaced implicit conclusion "YYY").
 
 ## Constraints
 
