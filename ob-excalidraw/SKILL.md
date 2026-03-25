@@ -37,10 +37,10 @@ This skill supports two broad categories of figures:
 
 When generating a diagram:
 1. Save the `.excalidraw.md` file to the project folder: `<project>/<name>.excalidraw.md`
-2. The Excalidraw plugin auto-exports SVG to the same folder (configured via frontmatter)
+2. The Excalidraw plugin auto-exports PNG to the same folder (configured via frontmatter)
 3. Append an embed link to the project's main proposal document (e.g., `<project>.md`):
    ```
-   ![[<name>.svg]]
+   ![[<name>.png]]
    ```
 
 If you're unsure which project folder to use, ask the user.
@@ -49,7 +49,7 @@ If you're unsure which project folder to use, ask the user.
 
 Read the template at `assets/template.excalidraw.md` and use it as the base for every generated file. Replace `{complete Excalidraw JSON here}` with the actual Excalidraw JSON data. Do not modify the frontmatter or section headers — the Obsidian Excalidraw plugin requires this exact structure to parse the file correctly.
 
-The `excalidraw-autoexport: svg` frontmatter tells the plugin to automatically generate and keep in sync an SVG file alongside the drawing.
+The `excalidraw-autoexport: png` frontmatter tells the plugin to automatically generate and keep in sync a PNG file alongside the drawing.
 
 ## Design Rules for Academic Figures
 

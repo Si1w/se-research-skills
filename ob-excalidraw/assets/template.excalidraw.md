@@ -1,7 +1,7 @@
 ---
 excalidraw-plugin: parsed
 tags: [excalidraw]
-excalidraw-autoexport: svg
+excalidraw-autoexport: png
 excalidraw-export-transparent: true
 excalidraw-export-dark: false
 excalidraw-export-padding: 20

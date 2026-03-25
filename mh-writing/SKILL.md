@@ -136,7 +136,7 @@ If the current paragraph breaks these mappings, point it out.
 6. **Words that cannot start a sentence** — "or", "and", "then", "also" should not begin sentences in formal writing.
 7. **Gender-neutral language** — Avoid "he" as default pronoun. Use "they" or rephrase.
 8. **Avoid over-emphasis** — Italics and bold used sparingly. When everything is emphasised, nothing is.
-9. **Avoid dashes in prose** — Do not use em-dashes (—) or en-dashes (–) as substitutes for proper sentence structure. Academic prose should flow through complete, connected sentences. Instead of inserting a dash to squeeze in an aside, rewrite as a separate sentence, use a comma, or restructure with subordinate clauses. Dashes signal informal or rushed writing and break the reader's flow.
+9. **Minimise dashes in prose** — Avoid em-dashes (—) or en-dashes (–) as substitutes for proper sentence structure unless they genuinely improve readability (e.g., a short parenthetical that would be clumsy as a separate sentence). Prefer rewriting as a separate sentence, using a comma, or restructuring with subordinate clauses. Overuse of dashes signals informal or rushed writing.
 
 ## Trim & Expand Mode
 
@@ -172,7 +172,7 @@ Add depth through three techniques:
 
 - Do not restructure paragraphs, merge or split sentences unnecessarily, or rewrite from scratch. The result should be recognizably the same text.
 - Preserve all technical terms, numerical values, math formulas (`$...$`), LaTeX commands, and qualifying conditions exactly as-is.
-- Keep LaTeX source clean: no bold, no italics, no quotation marks not in the original. Avoid introducing em-dashes. Do not convert prose into bullet lists. Escape special characters properly.
+- Keep LaTeX source clean: no bold, no italics, no quotation marks not in the original. Minimise introducing em-dashes. Do not convert prose into bullet lists. Escape special characters properly.
 - **Scope check**: Count the word difference. For trim, if more than ~20 words were removed, review — something substantive was probably lost. For expand, if more than ~20 words were added, review — something is probably filler. The sweet spot is 5-15 words.
 
 ### Output format (trim & expand only)

@@ -1,0 +1,11 @@
+[project]
+name = "se-research-skills"
+version = "0.1.0"
+description = "Claude Code skills for SE research workflows"
+requires-python = ">=3.11"
+dependencies = [
+    "requests>=2.31",
+]
+
+[tool.uv]
+dev-dependencies = []
