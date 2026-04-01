@@ -62,14 +62,10 @@ Check the current branch with `git branch --show-current`:
 ```
 
 - The Tests section MUST use `- [ ]` checkbox format so reviewers can tick them off.
+- If a test item has already been verified during the PR workflow (e.g., you ran a command and confirmed it works), mark it as checked: `- [x]`.
 - Before running `gh pr create`, print the draft PR body and ask the user to confirm or revise it. Do not create the PR without explicit user approval.
 - Add additional sections only when genuinely needed (e.g., Breaking Changes, Migration).
 - After `gh pr create` completes, print the PR URL to the user so they can open it directly in the browser.
-
-### 7. Cleanup (only when started NOT on `main`)
-
-After the PR is created:
-- Delete the old branch locally if it is no longer needed: `git branch -d <old-branch-name>`
 
 ## Branch Naming
 
@@ -89,4 +85,3 @@ After the PR is created:
 - Do not use `git add .` or `git add -A` without checking for sensitive files first.
 - Do not create a PR with an empty or generic body like "update" or "fix stuff".
 - Do not skip the diff review step.
-- Do not leave stale local branches around after cleanup step.
