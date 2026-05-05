@@ -43,6 +43,11 @@ A collection of Agent skills for software engineering research and development w
 |-------|-------------|
 | [weekly-report](weekly-report/) | Generate Quarto slide deck for supervisor meetings |
 
+## References
+
+- [obra/superpowers](https://github.com/obra/superpowers) — The original skill collection that several skills in this repo were adapted from.
+- [Draft Guidelines for My Students on Writing Software Engineering Research Papers](https://cragkhit.github.io/files/harman-writing-advice.pdf) — Mark Harman's writing guidelines, used as the basis for the [mh-writing](mh-writing/) skill.
+
 ## Setup
 
 ```bash
