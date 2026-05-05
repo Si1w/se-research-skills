@@ -1,19 +1,47 @@
 # se-research-skills
 
-A collection of Agent skills for software engineering research paper workflows.
+A collection of Agent skills for software engineering research and development workflows.
 
 ## Skills
+
+### Research
 
 | Skill | Description |
 |-------|-------------|
 | [ese-review](ese-review/) | Review a paper against ACM/SIGSOFT Empirical Standards |
-| [mh-writing](mh-writing/) | Write and improve SE research papers paragraph by paragraph, based on Mark Harman's guidelines |
-| [ob-excalidraw](ob-excalidraw/) | Generate research diagrams (pipeline overviews, method illustrations, architecture) using Excalidraw in Obsidian |
-| [rp-generate](rp-generate/) | Develop research ideas through adversarial dialogue, validate with Zotero/Obsidian, output structured proposals |
-| [gh-pr](gh-pr/) | Create a new branch, commit, push, and open a GitHub PR targeting main |
-| [git-clean](git-clean/) | Clean up feature branch after PR merge — delete branch, switch to main, pull latest |
-| [git-push](git-push/) | Push the current branch to the remote repository |
-| [skill-creator](skill-creator/) | Create and improve skills through structured product thinking |
+| [mh-writing](mh-writing/) | Write and improve SE research papers paragraph by paragraph (Mark Harman's guidelines) |
+| [ob-excalidraw](ob-excalidraw/) | Generate research diagrams using Excalidraw in Obsidian |
+| [rp-generate](rp-generate/) | Develop research ideas through adversarial dialogue, output structured proposals |
+
+### Development Workflow
+
+| Skill | Description |
+|-------|-------------|
+| [project-draft](project-draft/) | Brainstorm and design projects/features before implementation |
+| [plan](plan/) | Write and execute implementation plans with subagent support |
+| [tdd](tdd/) | Test-driven development with verification discipline |
+| [systematic-debugging](systematic-debugging/) | Root-cause debugging methodology (four phases) |
+| [code-review](code-review/) | Request and receive code reviews with technical rigor |
+
+### Git Workflow
+
+| Skill | Description |
+|-------|-------------|
+| [gh-pr](gh-pr/) | Create branch, commit, push, and open a GitHub PR |
+| [git-clean](git-clean/) | Clean up feature branch after PR merge |
+| [git-push](git-push/) | Push current branch to remote |
+
+### Meta
+
+| Skill | Description |
+|-------|-------------|
+| [skill-creator](skill-creator/) | Create and improve skills with TDD-based validation |
+
+### Reporting
+
+| Skill | Description |
+|-------|-------------|
+| [weekly-report](weekly-report/) | Generate Quarto slide deck for supervisor meetings |
 
 ## Setup
 

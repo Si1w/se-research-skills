@@ -33,7 +33,19 @@ A first-tier venue referee may be reviewing 15–25 papers in a short period. Th
 
 2. **Read existing context** — if the paper already has other sections written, read them to ensure consistency in terminology, narrative flow, and style.
 
-3. **Write the paragraph**, applying the Writing Rules below. The output should be publication-ready prose, not a rough draft for the user to rewrite.
+3. **Maintain `naming.md`** — if a `naming.md` file exists in the paper's directory, read it before writing. This file is the single source of truth for terminology used in the paper. While writing or editing:
+   - **Check before introducing any technical term** — is there already a defined term in `naming.md` for this concept? If so, use it exactly.
+   - **When a new term appears** that is not yet in `naming.md`, add it with its definition and any synonyms that must NOT be used. For example:
+     ```markdown
+     ## Fault Localization
+     - **Canonical term:** fault localization
+     - **Do NOT use:** bug finding, defect detection, bug localization
+     - **Definition:** The process of identifying the location of a fault in source code.
+     ```
+   - **When the user introduces or changes a term**, update `naming.md` accordingly.
+   - If `naming.md` does not exist yet, create it on the first writing task and ask the user to confirm the initial terms.
+
+4. **Write the paragraph**, applying the Writing Rules below. The output should be publication-ready prose, not a rough draft for the user to rewrite.
 
 4. **Flag gaps** — if information needed for the paragraph is missing or unclear, ask the user rather than filling in with vague placeholder text. For example, if writing a results paragraph but the actual numbers are unknown, ask for them instead of writing "our approach achieves significant improvement".
 

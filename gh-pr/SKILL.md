@@ -13,6 +13,26 @@ hooks:
 
 ## Workflow
 
+### 0. Pre-flight Checks
+
+**Verify tests pass before proceeding:**
+
+```bash
+# Run project's test suite
+npm test / cargo test / pytest / go test ./...
+```
+
+If tests fail, stop. Fix failures before creating a PR.
+
+**Detect environment:**
+
+```bash
+GIT_DIR=$(cd "$(git rev-parse --git-dir)" 2>/dev/null && pwd -P)
+GIT_COMMON=$(cd "$(git rev-parse --git-common-dir)" 2>/dev/null && pwd -P)
+```
+
+If `GIT_DIR != GIT_COMMON`, you're in a git worktree — note this for cleanup later.
+
 ### 1. Review Changes
 
 - Run `git status` and `git diff` to understand what changed.
@@ -75,6 +95,7 @@ Check the current branch with `git branch --show-current`:
 
 ## Rules
 
+- Always verify tests pass before pushing.
 - Always review the diff before committing — no blind commits.
 - Never force push.
 - Never push directly to main — always go through a PR.
@@ -85,3 +106,5 @@ Check the current branch with `git branch --show-current`:
 - Do not use `git add .` or `git add -A` without checking for sensitive files first.
 - Do not create a PR with an empty or generic body like "update" or "fix stuff".
 - Do not skip the diff review step.
+- Do not skip test verification — broken PRs waste reviewer time.
+- Do not proceed with failing tests.
