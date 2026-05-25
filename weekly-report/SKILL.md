@@ -11,14 +11,15 @@ The Quarto website is already scaffolded in the current workspace. This skill on
 
 ## Design Principles
 
-Slides are for **communication, not documentation**. Every slide must pass the "3-second test" — the audience grasps the core message within 3 seconds of seeing it.
+Slides are for **discussion, not status updates**. The meeting is a conversation about results — build the deck around **concrete artifacts** (figures, tables, analysis outputs) that the audience can react to, not a list of what you did.
 
-### Visual-first hierarchy
+### Artifact-first hierarchy
 
-1. **Mermaid diagrams** — for workflows, timelines, dependencies, progress pipelines
-2. **Key metrics / callouts** — bold numbers, short labels (e.g., "3 experiments completed")
-3. **Minimal bullets** — fragments, not sentences; max 4 items per slide
-4. **No prose paragraphs** — if it reads like an email, it belongs in notes not slides
+1. **Figures & tables** — copy output artifacts (PNGs, CSVs) from the scanned repos into the post directory; each artifact gets its own slide with a 1–2 sentence caption explaining what it shows and what to discuss
+2. **Mermaid diagrams** — for workflows, timelines, dependencies, progress pipelines (only when no pre-rendered figure exists)
+3. **Key metrics / callouts** — bold numbers, short labels (e.g., "30% AI-authored commits")
+4. **Minimal bullets** — fragments, not sentences; max 4 items per slide; use only for Recap, Blockers, Plan, or brief process updates that lack a visual
+5. **No prose paragraphs** — if it reads like an email, it belongs in notes not slides
 
 ### Language density rules
 
@@ -82,6 +83,21 @@ For each directory:
   ```
 
 Aggregate commits into 3–5 thematic groups. Do not dump raw `git log` into the slide.
+
+### 3b. Scan for output artifacts
+
+For each directory, find new figures and tables produced during the window:
+
+```bash
+find <path>/eval/tables-and-figures -newermt "<SINCE>" -type f 2>/dev/null | sort
+```
+
+Also check common output directories (`eval/`, `results/`, `output/`, `figures/`). For each artifact found:
+
+- **PNGs/PDFs**: read the image to understand what it shows.
+- **CSVs**: read the file to understand the data; consider rendering as a table slide.
+
+These artifacts are the **primary slide content**. Each interesting artifact becomes its own slide with a brief caption. Copy the relevant files into the post directory.
 
 ### 4. Gather qualitative content from the user
 
@@ -180,7 +196,7 @@ Do not automatically run `quarto render` unless the user asks.
 - Do **not** overwrite an existing post without explicit confirmation.
 - Do **not** skip the "confirm window" step.
 - Do **not** scan paths the user did not explicitly list.
-- Do **not** use markdown tables inside slides.
+- Do **not** summarize activity ("worked on X, built Y") without showing a concrete artifact — if there's no figure or table to anchor the slide, condense it into a bullet on a process-update slide instead.
 - Do **not** use vague verbs ("worked on", "continued", "progressed") — use concrete verbs ("drafted", "merged", "ran", "fixed").
 
 ## If the Quarto project is missing
