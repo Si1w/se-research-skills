@@ -1,11 +1,11 @@
 ---
-name: rp-generate
-description: Propose a research project in software engineering or Agent-based systems. Use this skill whenever the user wants to brainstorm, validate, or structure a research idea — even if they just have a vague direction or a half-formed hunch.
+name: brainstorming
+description: Brainstorm, validate, and structure a research proposal in software engineering or Agent-based systems. Use whenever the user wants to develop a research idea, research direction, or research question — including vague hunches — or wants to check whether a planned study's design is rigorous and complete. Not for engineering project/feature planning (use project-draft for that).
 ---
 
-# Research Project Generator
+# Research Proposal Brainstorming
 
-Help the user develop a research idea into a well-reasoned project proposal through rigorous, adversarial dialogue. The goal is not to find a publishable gap — it's to force deep thinking about whether a research direction is genuinely valuable and how to execute it well.
+Help the user develop a research idea into a well-reasoned proposal through rigorous, adversarial dialogue. The goal is not to find a publishable gap — it's to force deep thinking about whether a research direction is genuinely valuable, how to execute it well, and whether the planned study will hold up to the same empirical standards a reviewer will later apply.
 
 ## External Tools
 
@@ -13,42 +13,25 @@ Help the user develop a research idea into a well-reasoned project proposal thro
 
 Scripts in this skill use the shared Python environment at `~/.claude/skills/.venv/`, managed by `uv` with `~/.claude/skills/pyproject.toml`. Run scripts with:
 ```bash
-uv run --project ~/.claude/skills python ~/.claude/skills/rp-generate/scripts/<script>.py
+uv run --project ~/.claude/skills python ~/.claude/skills/brainstorming/scripts/<script>.py
 ```
-
-### Obsidian CLI
-
-Use `obsidian` CLI to read vault context, search related notes, create and open the proposal.
-
-**Prerequisites:** Obsidian running, CLI registered (Settings → General → CLI → Register). Verify with `obsidian help`.
-
-**Multi-vault:** If unclear which vault, ask. Pass `vault="<name>"` to every command.
-
-| Task | Command |
-|------|---------|
-| Read | `obsidian read file="Note Name"` or `obsidian read path="folder/note.md"` |
-| Search | `obsidian search query="keyword" limit=10` |
-| Create | `obsidian create name="Title" content="..." silent` |
-| Append | `obsidian append path="folder/note.md" content="..."` |
-| Open | `obsidian open path="folder/note.md"` |
-| Tag | `obsidian property:set name="tags" value="research-proposal" path="note.md"` |
 
 ### Zotero
 
 Search the user's paper library via `scripts/zotero.py`. Requires Zotero running with Better-BibTeX plugin.
 
 ```bash
-uv run --project ~/.claude/skills python ~/.claude/skills/rp-generate/scripts/zotero.py search "<keywords>"
-uv run --project ~/.claude/skills python ~/.claude/skills/rp-generate/scripts/zotero.py search "<keywords>" -c <collection>
-uv run --project ~/.claude/skills python ~/.claude/skills/rp-generate/scripts/zotero.py get <citation-key>
-uv run --project ~/.claude/skills python ~/.claude/skills/rp-generate/scripts/zotero.py collections
+uv run --project ~/.claude/skills python ~/.claude/skills/brainstorming/scripts/zotero.py search "<keywords>"
+uv run --project ~/.claude/skills python ~/.claude/skills/brainstorming/scripts/zotero.py search "<keywords>" -c <collection>
+uv run --project ~/.claude/skills python ~/.claude/skills/brainstorming/scripts/zotero.py get <citation-key>
+uv run --project ~/.claude/skills python ~/.claude/skills/brainstorming/scripts/zotero.py collections
 ```
 
 ---
 
 ## Phase 1: Deep Problem Understanding
 
-This phase is the core of the skill. Don't rush it. One question at a time, follow the thread, challenge every vague claim.
+Don't rush it. One question at a time, follow the thread, challenge every vague claim.
 
 **Must think through:**
 
@@ -86,7 +69,7 @@ The question is not "has this been done" but **"why hasn't this been solved sati
 
 Search in order:
 1. **Zotero** — papers the user already collected are high-signal. Check notes for prior thinking.
-2. **Obsidian vault** — `obsidian search` for related research notes.
+2. **Local notes** — grep/search the user's existing markdown notes and past proposals for related thinking.
 3. **External** — arxiv, Google Scholar, SE venues (ICSE, FSE, ASE, ISSTA, MSR).
 
 Synthesize:
@@ -109,19 +92,33 @@ Push the user to define:
 - What data, what metric, what threshold constitutes success
 - What result would make them stop
 
+### Research Design Completeness Check
+
+Once the study shape is clear, pre-mortem it against the **same empirical standards a reviewer will later apply**. Catching a missing baseline or an unsupported generalizability claim now is cheap; catching it in review is a rejection.
+
+1. **Classify the planned study type(s)** using the same taxonomy as the review standards (e.g., engineering-research, experiment, benchmarking, repository-mining, data-science, optimization-study, case-study, questionnaire-survey, systematic-review). A study often spans several — classify all that apply.
+
+2. **Load the matching standard(s)** from the shared reference set at `~/.claude/skills/ese-review/references/`:
+   - `general/general-standard.md` — always
+   - `general/engineering-research.md` — for any study that builds and evaluates an artifact (most SE/Agent tool papers)
+   - the specific standard(s) for the planned method (see the table below)
+
+3. **Walk the essential attributes as design requirements, not a grading rubric.** For each essential attribute the standard demands, ask: *will the study as currently planned be able to satisfy it?* Surface the gaps now:
+   - Baselines the design must include to support its claims
+   - Datasets/benchmarks needed for the breadth the claims will assert (single-benchmark designs cannot back "general applicability")
+   - Statistical plan — effect sizes and tests, not just p-values, planned before data collection
+   - Threats to validity that must be designed against, not bolted on later
+   - Reproducibility artifacts (data, code, prompts, seeds) the design should commit to producing
+
+4. **Turn each gap into a proposal decision or an explicit TODO.** Either adjust the design to close the gap, or scope the claim down to what the design can actually support. Record the gap and the resolution in the proposal — don't let it stay implicit.
+
+Be blunt: if the planned design cannot satisfy an essential attribute of its own method type, the claims must shrink or the design must change before writing a line of the proposal.
+
 ---
 
 ## Phase 3: Structured Output
 
-Read `assets/template.md` for the template. Create as an Obsidian note:
-
-```bash
-obsidian create name="<Project Name>" content="..." silent
-obsidian property:set name="tags" value="research-proposal" path="<Project Name>.md"
-obsidian open file="<Project Name>"
-```
-
-For long proposals, create then append section by section.
+Read `assets/template.md` for the template. Write the proposal as a single markdown file with the Write/Edit tools. Ask the user for the destination path; default to `<Project-Name>.md` in the current working directory. Maintain that one file as the thinking evolves.
 
 **Writing rules:**
 - Write for yourself. Be blunt, skip hedging, capture the reasoning process.
@@ -139,9 +136,23 @@ For long proposals, create then append section by section.
 - **Scope creep**: "And we could also..." — is that core to the value, or distraction?
 - **Feasibility blindness**: Grand vision without a realistic execution path.
 - **Benchmark chasing**: Optimizing numbers on a leaderboard without asking if the benchmark measures something meaningful.
+- **Claim/design mismatch**: Promising broad conclusions a design that's too narrow can't support. Run the Research Design Completeness Check and either widen the design or narrow the claim.
+- **Deferring rigor**: "We'll add baselines/stats/threats later." If an essential attribute of the method isn't in the design now, the proposal is building on sand.
 
 ## Constraints
 
 - **Depth over breadth.** Force the user to think deeply about one well-scoped problem rather than skim across a broad area.
 - **Be brutally honest.** If the idea is weak, say so. Hard truths before committing months.
 - **No filler.** Every section: substantive content or explicit TODO.
+
+## Empirical Standards Reference
+
+Shared with `ese-review` — read on demand from `~/.claude/skills/ese-review/references/`.
+
+| Category | Files (under `references/`) |
+|----------|------------------------------|
+| General | `general/general-standard`, `general/engineering-research`, `general/mixed-methods` |
+| Quantitative | `quantitative/experiment`, `data-science`, `repository-mining`, `questionnaire-survey`, `benchmarking`, `longitudinal`, `optimization-study`, `quantitative-simulation` |
+| Qualitative | `qualitative/case-study`, `grounded-theory`, `action-research`, `qualitative-survey` |
+| Literature Review | `literature-review/systematic-review`, `case-survey` |
+| Other | `other/replication`, `meta-science` |

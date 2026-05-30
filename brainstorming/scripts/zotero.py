@@ -4,10 +4,10 @@ Uses Better-BibTeX JSON-RPC for search and metadata,
 SQLite (via temp copy) for notes and annotations.
 
 Usage:
-    uv run python rp-generate/scripts/zotero.py search "LLM code generation"
-    uv run python rp-generate/scripts/zotero.py search "agent" --collection Interest
-    uv run python rp-generate/scripts/zotero.py collections
-    uv run python rp-generate/scripts/zotero.py get <citation-key>
+    uv run python brainstorming/scripts/zotero.py search "LLM code generation"
+    uv run python brainstorming/scripts/zotero.py search "agent" --collection Interest
+    uv run python brainstorming/scripts/zotero.py collections
+    uv run python brainstorming/scripts/zotero.py get <citation-key>
 """
 
 import argparse
