@@ -9,16 +9,16 @@ The abstract is the paper's elevator pitch. Most readers (and many referees) dec
 - Single paragraph. No line breaks, no subsections.
 - No references or citations.
 - No forward references to sections, figures, or tables.
-- Typically 150–250 words (check venue guidelines).
+- Typically 150 to 250 words (check venue guidelines).
 
 ## Required Elements
 
 The abstract must answer four questions, in this order:
 
-1. **What is the problem?** — State the problem concisely.
-2. **Why does it matter?** — Motivate why anyone should care (practical impact, scale of the issue, gap in knowledge).
-3. **What is your solution?** — Describe your approach in one or two sentences.
-4. **What evidence do you offer?** — Zellerise: include key numbers that quantify the primary findings. "Our approach detected 23% more bugs than the baseline across 12 real-world projects" is far stronger than "Our approach outperforms existing techniques."
+1. **What is the problem?** State the problem concisely.
+2. **Why does it matter?** Motivate why anyone should care (practical impact, scale of the issue, gap in knowledge).
+3. **What is your solution?** Describe your approach in one or two sentences.
+4. **What evidence do you offer?** Zellerise: include key numbers that quantify the primary findings. "Our approach detected 23% more bugs than the baseline across 12 real-world projects" is far stronger than "Our approach outperforms existing techniques."
 
 ## Common Pitfalls
 

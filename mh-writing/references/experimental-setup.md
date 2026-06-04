@@ -6,13 +6,13 @@ This section explains how you propose to demonstrate that your solution addresse
 
 ## Format
 
-- Typically 1–2 pages.
+- Typically 1 to 2 pages.
 - Often structured around research questions (RQs), with subsections for subjects, metrics, and procedure.
 - RQs should be numbered, named with pithy noun-phrases, and motivated.
 
 ## Required Elements
 
-- **Research Questions**: Numbered and named RQs that the experiments will answer. Each RQ needs a brief motivation — why is this question worth asking?
+- **Research Questions**: Numbered and named RQs that the experiments will answer. Each RQ needs a brief motivation that explains why this question is worth asking.
 - **Subjects / Benchmarks**: What datasets, programs, or subjects you chose to evaluate on, and why. The selection criteria matter: if you chose 12 Java projects, explain why these 12 and not others.
 - **Metrics and measurements**: What you measured and how. Statistical tests applied, significance thresholds, effect size measures.
 - **Baselines**: What you compare against and why these baselines are appropriate.

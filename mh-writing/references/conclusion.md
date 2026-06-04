@@ -6,7 +6,7 @@ The conclusion is the last part of the paper's "envelope." It restates the prima
 
 ## Format
 
-- Typically 0.5–1 page.
+- Typically 0.5 to 1 page.
 - Two parts: conclusion and future work (future work may be a separate subsection or integrated).
 - No new technical content, results, or arguments. Everything here should have been presented earlier.
 
@@ -24,9 +24,9 @@ The conclusion is the last part of the paper's "envelope." It restates the prima
 ## Common Pitfalls
 
 - **Too long**: A conclusion that re-summarises the entire paper wastes space and the referee's time. Hit the key points and stop.
-- **Long future work**: A long future work discussion signals that the paper has underachieved — it has left undone what ought to have been done, and the length itself tells the referee so. Keep it short.
+- **Long future work**: A long future work discussion signals that the paper has underachieved. It has left undone what ought to have been done, and the length itself tells the referee so. Keep it short.
 - **New information**: Introducing new results, arguments, or claims in the conclusion. If it matters, it should have appeared earlier.
-- **Weak ending**: The last sentence of the paper is what the referee reads right before deciding their score. Make it count — end with the strongest, most memorable statement of your contribution.
+- **Weak ending**: The last sentence of the paper is what the referee reads right before deciding their score. Make it count by ending with the strongest, most memorable statement of your contribution.
 - **Future work as apology**: "In future work we plan to evaluate on more subjects" reads as "we know our evaluation is insufficient." Frame future work as exciting next steps, not as patching holes.
 
 ## Checklist

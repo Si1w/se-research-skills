@@ -6,7 +6,7 @@ Discussion is the bridge between "what we found" and "what it means." Unlike Res
 
 ## Format
 
-- Typically 1–2 pages.
+- Typically 1 to 2 pages.
 - Each subsection should have a **bold title** that signals its topic. This helps referees quickly locate specific discussion points and gives the section visual structure. A wall of undifferentiated prose is hard to navigate.
 - Organise by theme or by RQ, depending on which produces a more coherent narrative.
 
@@ -40,11 +40,11 @@ Based on our findings, we recommend...
 
 The following classic SE methodology papers inform how Discussion sections should be written:
 
-- **Ralph et al., ACM SIGSOFT Empirical Standards (2021)** — Essential: "discusses implications of the results." Desirable: "provides plausibly useful interpretations or recommendations for practice, education or research."
-- **Shaw, "Writing Good SE Research Papers" (ICSE 2003)** — Discussion should show how the work responds to the "big question" posed in the Introduction. Distinguish observable evidence from author inference.
-- **Wohlin et al., "Experimentation in Software Engineering" (2012)** — Result interpretation should tie back to experimental design and validity concerns.
-- **Runeson & Höst, "Guidelines for Case Study Research in SE" (2009)** — Case studies need deeper contextual discussion; explain applicability within the studied context.
-- **Stol & Fitzgerald, "Guidelines for Conducting SE Research"** — Explicitly separate Results (objective) from Discussion (subjective interpretation). Discussion may report interesting observations not directly tied to RQs.
+- **Ralph et al., ACM SIGSOFT Empirical Standards (2021)**: Essential: "discusses implications of the results." Desirable: "provides plausibly useful interpretations or recommendations for practice, education or research."
+- **Shaw, "Writing Good SE Research Papers" (ICSE 2003)**: Discussion should show how the work responds to the "big question" posed in the Introduction. Distinguish observable evidence from author inference.
+- **Wohlin et al., "Experimentation in Software Engineering" (2012)**: Result interpretation should tie back to experimental design and validity concerns.
+- **Runeson & Höst, "Guidelines for Case Study Research in SE" (2009)**: Case studies need deeper contextual discussion; explain applicability within the studied context.
+- **Stol & Fitzgerald, "Guidelines for Conducting SE Research"**: Explicitly separate Results (objective) from Discussion (subjective interpretation). Discussion may report interesting observations not directly tied to RQs.
 
 ## Common Pitfalls
 

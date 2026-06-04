@@ -2,11 +2,11 @@
 
 ## Purpose
 
-This section contains the definitive explanation of your novel technical approach. It is where the referee assesses the intellectual contribution of the paper — the ideas, the algorithm, the design. This must be clear, precise, and well-separated from both the problem description and the evaluation.
+This section contains the definitive explanation of your novel technical approach. It is where the referee assesses the intellectual contribution of the paper: the ideas, the algorithm, and the design. This must be clear, precise, and well-separated from both the problem description and the evaluation.
 
 ## Format
 
-- Typically the longest technical section (2–4 pages).
+- Typically the longest technical section (2 to 4 pages).
 - Use figures (architecture diagrams, algorithm pseudocode, workflow diagrams) to aid understanding.
 - Subsections are appropriate for multi-part approaches.
 - Algorithm listings should use standard pseudocode conventions, not implementation-specific syntax.

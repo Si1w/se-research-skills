@@ -6,9 +6,9 @@ This section demonstrates intellectual honesty and helps the reader understand t
 
 ## Format
 
-- Typically 0.5–1 page.
+- Typically 0.5 to 1 page.
 - Often organised by validity type: internal, external, construct, and conclusion validity (though not all categories apply to every paper).
-- Each threat should be paired with a mitigation — what you did to minimise the risk.
+- Each threat should be paired with a mitigation that states what you did to minimise the risk.
 
 ## Required Elements
 
@@ -21,7 +21,7 @@ This section demonstrates intellectual honesty and helps the reader understand t
 - **The apology trap**: "Our study only uses 5 subjects, so results may not generalise." This is a pure apology that gives the referee a reason to reject. Instead: "We evaluated on 5 large-scale industrial projects (totalling 2.3M LoC). While this limits generalisability, these projects represent diverse domains and our within-project results are consistent."
 - **Padding with generic threats**: Copy-pasting standard threat categories without connecting them to the actual study. Every threat should be specific to this paper.
 - **Missing obvious threats**: If the referee notices a threat you did not mention, they will question your thoroughness. Better to acknowledge and mitigate than to ignore.
-- **Too long**: A lengthy threats section signals that the study has too many limitations. Keep it concise — acknowledge, mitigate, move on.
+- **Too long**: A lengthy threats section signals that the study has too many limitations. Keep it concise: acknowledge, mitigate, move on.
 
 ## Checklist
 

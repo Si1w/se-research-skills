@@ -8,13 +8,13 @@ This section presents the evidence gathered from the experiments and uses it to 
 
 - Organise by research question: one subsection per RQ (or group of related RQs).
 - Within each subsection, present evidence first, then interpretation.
-- Typically 2–4 pages depending on the number of RQs.
+- Typically 2 to 4 pages depending on the number of RQs.
 
 ## Required Elements
 
-1. **Evidence presentation**: Tables, figures, and statistical results for each RQ. Present the data without judgement first — let the reader see the numbers.
+1. **Evidence presentation**: Tables, figures, and statistical results for each RQ. Present the data without judgement first; let the reader see the numbers.
 2. **RQ answers**: After presenting the evidence, state clearly how it answers each RQ. This involves the authors' interpretation and judgement. Separate evidence from interpretation so the referee can form their own view before reading yours.
-3. **Figure/Table–RQ mapping**: Aim for a 1:1 correspondence between figures/tables and the research questions they address. If one figure serves multiple RQs, or one RQ requires many figures, consider refactoring — perhaps subsidiary questions would help (RQ1.1, RQ1.2, etc.).
+3. **Figure/Table to RQ mapping**: Aim for a 1:1 correspondence between figures/tables and the research questions they address. If one figure serves multiple RQs, or one RQ requires many figures, consider refactoring. Subsidiary questions may help (RQ1.1, RQ1.2, etc.).
 4. **Zeller numbers**: The key quantitative findings that should also appear in the abstract. Identify these numbers explicitly.
 
 ## Common Pitfalls

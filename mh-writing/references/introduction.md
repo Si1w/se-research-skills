@@ -2,11 +2,11 @@
 
 ## Purpose
 
-The introduction is the most important section of the paper. Together with the abstract and conclusions, it forms the paper's "envelope" — what the referee reads first and uses to form their initial accept/reject impression. By the time referees finish reading the contributions, they may have already decided.
+The introduction is the most important section of the paper. Together with the abstract and conclusions, it forms the paper's "envelope", which the referee reads first and uses to form their initial accept/reject impression. By the time referees finish reading the contributions, they may have already decided.
 
 ## Format
 
-- Typically 1–2 pages (for a 10-12 page paper).
+- Typically 1 to 2 pages (for a 10-12 page paper).
 - Ends with a clearly delineated contribution statement.
 - Contribution statement uses an enumerated list (not bullets).
 - No subsections unless the introduction is unusually long.
@@ -33,7 +33,7 @@ The introduction is the most important section of the paper. Together with the a
 - First-tier venue referees may not be expert in your specific area.
 - The introduction must give them a good feel for what you are proposing.
 - Explain with clear and compelling evidence why they should care.
-- Referees may be reviewing 15–25 other papers in a short period — make their job easy.
+- Referees may be reviewing 15 to 25 other papers in a short period. Make their job easy.
 
 ## Checklist
 

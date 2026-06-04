@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Figures and tables are "boxouts" — elements that stand out when a referee flicks through the paper. Together with the envelope (title, abstract, introduction, conclusions), they form the referee's first impression. A referee who sees clear, informative figures will approach the text more favourably.
+Figures and tables are "boxouts", elements that stand out when a referee flicks through the paper. Together with the envelope (title, abstract, introduction, conclusions), they form the referee's first impression. A referee who sees clear, informative figures will approach the text more favourably.
 
 ## Format
 
@@ -15,7 +15,7 @@ Figures and tables are "boxouts" — elements that stand out when a referee flic
 ### Tables
 - Numeric columns: always right-justified.
 - Name columns (e.g., program names): left-justified.
-- Centre justification: rarely appropriate — only when data does not require left or right alignment.
+- Centre justification: rarely appropriate, and only when data does not require left or right alignment.
 - Units go in column headings, not repeated in each row.
 - Captions go above the table.
 
@@ -28,9 +28,9 @@ Figures and tables are "boxouts" — elements that stand out when a referee flic
 
 ## Common Pitfalls
 
-- **Not self-contained**: Caption says "Results of our experiment" — this is useless. Caption should say "Fault detection rates (%) of our approach vs. three baselines across 12 Java projects. Higher is better. Bold indicates statistical significance at p < 0.05."
+- **Not self-contained**: Caption says "Results of our experiment." This is useless. Caption should say "Fault detection rates (%) of our approach vs. three baselines across 12 Java projects. Higher is better. Bold indicates statistical significance at p < 0.05."
 - **Unreadable when printed**: Tiny labels, thin lines, low contrast. Referees often review on printouts or small screens.
-- **Colour-only encoding**: Using colour as the only way to distinguish data series. The paper must be perfectly understandable when printed in black and white — referees usually see things in B&W. Use patterns, markers, or line styles in addition to colour.
+- **Colour-only encoding**: Using colour as the only way to distinguish data series. The paper must be perfectly understandable when printed in black and white because referees usually see things in B&W. Use patterns, markers, or line styles in addition to colour.
 - **Superficial visual features (SIP violation)**: The Semantic Information Principle says every discernible visual difference should convey meaning. If two boxes have different shapes, that difference must mean something. Avoid decorative shading, 3D effects, background colours on plots, or other visual noise that does not encode data.
 - **Repeated information**: If you see the same word repeated in every row of a table, it belongs in the heading. Like programming: repeated code means you need a loop.
 - **Too many figures/tables**: If figures and tables consume more than 40% of the paper, the text-to-visual ratio is off. Each visual should earn its space.
