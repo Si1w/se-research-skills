@@ -7,6 +7,15 @@ description: Review a paper against ACM/SIGSOFT Empirical Standards. Treat backg
 
 Review the uploaded paper (PDF/tex) against empirical standards. This is a **close-reading review** — every section, every paragraph, every sentence matters. Do not skim. Do not give the benefit of the doubt.
 
+## Output Modes
+
+Default to **chat output only**. Do not create `review-report.md`, `review.md`, or any other report file unless the user explicitly asks to save/export/write the report to a file.
+
+- **Full Review** — when the user asks for a review, standards-based review, ESE review, or reviewer-style assessment. Output the structured review in chat using the format in Step 6.
+- **Final Proofread** — when the user asks for a final check, red-line review, or proofreading. Output only `[PASS — no substantive issues]` or a short numbered issue list. Do not generate files.
+- **Checklist Only** — when the user asks specifically for a checklist. Output or update only `review-checklist.md`; do not also write a review report.
+- **File Output** — only when the user explicitly asks to save, export, create, or write a named file. Use the requested filename; if none is specified, ask before choosing one.
+
 ## Review Process
 
 ### Step 1: Identify Research Type
@@ -78,11 +87,13 @@ Zero tolerance. Mark `[x]` if satisfied; for `[ ]`, write a pointed annotation t
 
 Save to `review-checklist.md`.
 
-### Step 6: Write Review Report
+### Step 6: Produce Full Review Output
 
 Blunt, specific, unambiguous about what is wrong and why it matters.
 
-**Structure**:
+Default destination: chat. File output requires an explicit user request.
+
+**Chat structure**:
 
 - **Summary** (2–3 sentences) — what the paper does, method, claims. Factual; no praise.
 - **Strengths** (1–2) — genuine contributions only. No hollow compliments. If the only strength is timeliness, say so and move on.
@@ -116,7 +127,7 @@ The default disposition is **skeptical** but skepticism must be *calibrated*, no
 7. **Actionability** — never "improve experiments"; write "add cross-project generalization on ≥2 additional benchmarks; report Wilcoxon p-values with Cliff's delta for all pairwise comparisons".
 8. **Originality assessment** — distinguish substantive novelty from over-packaged incrementalism. Call out the latter directly.
 9. **Consistency audit** — every contribution claimed in the intro must be validated in the experiments. Flag any drift between abstract, intro, evaluation, and conclusion.
-10. **Checklist enforcement** — `review-checklist.md` must be generated/updated with all items checked and annotated before writing the report.
+10. **Checklist enforcement** — `review-checklist.md` must be generated/updated with all items checked and annotated before producing the full review output.
 
 ## Final Proofread Mode
 
@@ -162,7 +173,7 @@ Brief definitions (from ACM/SIGSOFT):
 
 ## Execution Protocol
 
-Self-check before outputting the report:
+Self-check before producing the output:
 
 1. **Close reading done** — every section read, nothing skimmed.
 2. **Tone calibration** — hedged phrases ("could perhaps", "might benefit from") rewritten as direct statements ("fails to", "does not"). If the tone would leave the authors comfortable, it is too soft.
