@@ -1,37 +1,17 @@
-# Background and Related Work
+# Background, Preliminaries, and Related Work
 
-## Purpose
+## Placement
 
-This section establishes context: what others have done, how it relates to your work, and what gap your paper fills. It demonstrates that you know the field and positions your contribution within it.
+Most papers have a related work section, located just before the conclusions. The alternative is a background or preliminaries section, located just after the introduction. In very rare cases you may need both, and it is extremely rare that you would have neither.
 
-## Format
+A related work section is usually preferable: it is usually sufficient to set the scene for the state-of-the-art in the introduction and delay the discussion of related work to the end, once the reader has seen your contribution.
 
-Two options exist. Choose one, rarely both:
+## Related Work
 
-1. **Related Work section**: located just before the conclusions. Preferred when the paper does not require heavy scene-setting.
-2. **Background/Preliminaries section**: located just after the introduction. Use when the paper requires significant scene-setting (definitions, mathematical notations, establishing state-of-the-art) or when the section contributes a new survey.
+- Explain not only what other authors have done, but also how that work relates to your own contributions.
+- Conclude the section with a single pithy paragraph that summarises the novelty and the advance over the state-of-the-art that your paper contributes.
 
-If you use a Background section, it should contribute something (new taxonomy, new survey, new definitions). If it merely describes what others have done, it belongs as a Related Work section near the end.
+## When to Use a Background Section
 
-## Required Elements
-
-- **Coverage of key related work**: The most important papers in the area must be cited and discussed. Referees check this to assess whether the authors know their field.
-- **Relationship to your work**: For each piece of related work, explain not just what they did, but how it relates to your contributions: what is similar, what is different, and why your approach advances the state of the art.
-- **Novelty summary**: Conclude the section with a single pithy paragraph summarising the novelty and advance your paper contributes over the existing body of work.
-
-## Common Pitfalls
-
-- **Novelty delay**: A background section that merely describes what others have done delays the referee's access to your novel material. This has a bad psychological effect because the referee wants to see your contribution, not a textbook summary.
-- **List of summaries without comparison**: "Smith et al. did X. Jones et al. did Y." with no analysis of how they relate to each other or to your work. This reads as a literature dump, not a related work section.
-- **Missing key papers**: If you miss a paper that the referee authored or considers foundational, they will question your thoroughness. Search broadly.
-- **Background section as padding**: A long background section with no original contribution signals that the authors are filling space. Either contribute a genuine survey/taxonomy or move it to a shorter related work section.
-
-## Checklist
-
-- [ ] Key related work in the area is cited and discussed
-- [ ] Each cited work is compared to your approach (not just summarised)
-- [ ] Section ends with a novelty summary paragraph
-- [ ] Placement is appropriate (background after intro, or related work before conclusions)
-- [ ] Does not merely describe prior work without relating it to your contribution
-- [ ] Does not delay access to novel material unnecessarily
-- [ ] Reference formatting is consistent
+- Use a background section when the paper requires a great deal of scene-setting — definitions, mathematical notations, or precise establishment of the current state-of-the-art — or when it contributes survey-like material to establish the importance of the problem or the gap that your work fills.
+- Its disadvantage is 'novelty delay': it takes longer for the referee to reach your novel material, which can have a bad psychological effect. This is acceptable if the section itself provides novelty (new notations, definitions, or a new survey). If it merely describes what others have done, move it to a related work section near the end.

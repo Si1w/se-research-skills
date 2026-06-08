@@ -1,50 +1,19 @@
 # Figures and Tables
 
-## Purpose
+## Context-Free Boxouts
 
-Figures and tables are "boxouts", elements that stand out when a referee flicks through the paper. Together with the envelope (title, abstract, introduction, conclusions), they form the referee's first impression. A referee who sees clear, informative figures will approach the text more favourably.
+A referee typically skims the paper first, and their eyes alight on a figure or table. They should be able to understand its message from the figure or table and its caption alone, without scanning the text to find where it is mentioned. The same applies to tables and any other boxed-out or highlighted parts of the paper.
 
-## Format
+## Figures
 
-### Figures
-- Must be readable when reduced to fit the column/page width. Increase point size of labels (axis labels, legends) relative to figure size.
-- All text within figures (axis labels, tick marks, legend entries, annotations) must be clearly legible when printed on A4 paper at the final layout size. If any text requires squinting or zooming, the font size is too small. As a rule of thumb, no text in a figure should be smaller than the caption font size.
-- Use vector formats (PDF, SVG) over raster formats (PNG, JPG) whenever possible.
-- Captions go below the figure.
+- Make figures readable, even when reduced to fit. This may mean increasing the point size of labels (such as axis labels) relative to the size of the overall figure.
+- Respect the Semantic Information Principle (SIP): every discernible feature difference should have a meaning, and if two distinct details are unified then meaning is lost. Avoid superficial features that do not convey meaning, such as shading behind boxes or background colours on plots.
 
-### Tables
-- Numeric columns: always right-justified.
-- Name columns (e.g., program names): left-justified.
-- Centre justification: rarely appropriate, and only when data does not require left or right alignment.
-- Units go in column headings, not repeated in each row.
-- Captions go above the table.
+## Tables
 
-## Required Elements
+- Columns of numbers should always be right justified. Lists of names (e.g. names of programs) should be left justified. Centre justification is rarely suitable, but it can work when the data requires neither left nor right, or for a column whose entries are all of different types.
+- Units should appear in the column heading and not be repeated in each row. Repetition that does not serve an important purpose is a sign that some refactoring is required — just as repeated code is a sign that you needed a loop.
 
-- **Self-contained captions**: Every figure and table must be understandable from its caption alone. A referee flicking through the paper should be able to understand what each figure shows without reading the surrounding text.
-- **Referenced in text**: Every figure and table must be referenced and discussed in the body text. An unreferenced figure is a wasted figure.
-- **Every element explained**: Every axis, column, row label, legend entry, symbol, abbreviation, and data series in a figure or table must be explicitly explained, either in the caption or in the surrounding text. If a table has a column called "Δ" or "Config.", the reader should never have to guess what it means. Unexplained elements signal carelessness and invite referee skepticism.
-- **Connected to RQs**: Each figure/table in the results section should clearly map to a research question.
+## Overall Look and Feel
 
-## Common Pitfalls
-
-- **Not self-contained**: Caption says "Results of our experiment." This is useless. Caption should say "Fault detection rates (%) of our approach vs. three baselines across 12 Java projects. Higher is better. Bold indicates statistical significance at p < 0.05."
-- **Unreadable when printed**: Tiny labels, thin lines, low contrast. Referees often review on printouts or small screens.
-- **Colour-only encoding**: Using colour as the only way to distinguish data series. The paper must be perfectly understandable when printed in black and white because referees usually see things in B&W. Use patterns, markers, or line styles in addition to colour.
-- **Superficial visual features (SIP violation)**: The Semantic Information Principle says every discernible visual difference should convey meaning. If two boxes have different shapes, that difference must mean something. Avoid decorative shading, 3D effects, background colours on plots, or other visual noise that does not encode data.
-- **Repeated information**: If you see the same word repeated in every row of a table, it belongs in the heading. Like programming: repeated code means you need a loop.
-- **Too many figures/tables**: If figures and tables consume more than 40% of the paper, the text-to-visual ratio is off. Each visual should earn its space.
-- **Poor page layout**: As a last step, arrange paragraphs to complete neatly at column ends, and place headings at the top of columns where possible. Avoid orphaned figure/table captions separated from their content.
-
-## Checklist
-
-- [ ] Every figure/table has a self-contained caption
-- [ ] Every figure/table is referenced in the body text
-- [ ] Figures are readable when reduced to column width
-- [ ] Numeric table columns are right-justified
-- [ ] Units are in column headings, not in rows
-- [ ] Paper is understandable in black and white
-- [ ] No decorative visual elements that do not encode data (SIP)
-- [ ] Every axis, column, legend entry, and symbol is explained in caption or text
-- [ ] Results figures/tables map to research questions
-- [ ] No unnecessary repetition in table rows
+The BW principle: the paper should be perfectly understandable when printed in black and white, because referees usually see things in black and white.

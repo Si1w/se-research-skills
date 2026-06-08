@@ -2,47 +2,20 @@
 
 ## Purpose
 
-The introduction is the most important section of the paper. Together with the abstract and conclusions, it forms the paper's "envelope", which the referee reads first and uses to form their initial accept/reject impression. By the time referees finish reading the contributions, they may have already decided.
+First-tier venue referees may not be expert in your research area, and they may be reviewing 15 to 25 other papers in a short period. The introduction must give them a good feel for what you are proposing and explain, with clear and compelling evidence, why they should care. By the time the referees read your contribution claims, they may already have decided whether to accept the paper.
 
-## Format
+## The Envelope
 
-- Typically 1 to 2 pages (for a 10-12 page paper).
-- Ends with a clearly delineated contribution statement.
-- Contribution statement uses an enumerated list (not bullets).
-- No subsections unless the introduction is unusually long.
+The first impression is made by the paper's 'envelope' — the title, abstract, introduction, conclusions, and reference list — together with the box-out items (equations, figures, and tables) that stand out when the reader flicks through the paper.
 
-## Required Elements
+## Contributions
 
-1. **Problem statement**: What problem are you solving? Make this concrete and specific.
-2. **Motivation**: Why does this problem matter? Use evidence (statistics, real-world impact, citations) rather than vague appeals.
-3. **Gap or limitation**: What is missing in existing work? Why are current solutions insufficient?
-4. **Your approach**: Brief, high-level description of what you propose. Enough for the reader to understand the idea, not the details.
-5. **Key results**: Mention the headline numbers (same Zeller numbers as the abstract) so the referee knows immediately that this paper has results.
-6. **Contribution statement**: An enumerated list at the end. Each item is a concise, compelling reason to accept the paper. This is essentially: "this is why you should accept my paper." Refine and re-refine until it is as tight and compelling as possible.
+- End the introduction with a short statement of the paper's contributions. This is one place where you might legitimately use an enumerated list (but not bullets).
+- The contribution claim is essentially the basis on which you tell the referee why they should accept the paper, so refine and re-refine it until it is as tight and compelling as possible.
 
-## Common Pitfalls
+## Research Questions
 
-- **No contribution statement**: The referee has to guess what the contributions are. Always end the introduction with an explicit list.
-- **Vague motivation**: "Testing is important" is not motivation. "Testing accounts for 50% of development costs [ref]" is motivation.
-- **Too much detail**: The introduction should give a feel for the approach, not describe the algorithm. Save details for the solution section.
-- **Claims without evidence**: Every claim in the introduction must be backed up later in the paper. If you claim "significant improvement", the results section must show it.
-- **Missing the envelope opportunity**: The introduction is half the envelope. A weak introduction means the referee starts the technical sections already sceptical.
-
-## Audience Awareness
-
-- First-tier venue referees may not be expert in your specific area.
-- The introduction must give them a good feel for what you are proposing.
-- Explain with clear and compelling evidence why they should care.
-- Referees may be reviewing 15 to 25 other papers in a short period. Make their job easy.
-
-## Checklist
-
-- [ ] Problem is stated clearly and specifically
-- [ ] Motivation uses evidence, not vague appeals
-- [ ] Gap in existing work is identified
-- [ ] Approach is described at a high level
-- [ ] Key results are mentioned (Zeller numbers)
-- [ ] Contribution statement is present and enumerated
-- [ ] Each contribution is concise and compelling
-- [ ] No claims are made that the paper does not support
-- [ ] Accessible to non-specialist referees
+- Number your research questions so that you can refer to them.
+- Give each a single memorable, pithy name — a noun phrase that conjures the question — and avoid prepositions and other incidental words ("Approximation Effect" rather than "Effect of Approximation").
+- Make sure each research question is answered clearly and definitively in a single, well-identified place in the paper.
+- Summarise the research questions as contributions at the end of the introduction, and pick out the key numbers for Zellerisation in the abstract.
