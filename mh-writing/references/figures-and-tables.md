@@ -16,4 +16,4 @@ A referee typically skims the paper first, and their eyes alight on a figure or 
 
 ## Overall Look and Feel
 
-The BW principle: the paper should be perfectly understandable when printed in black and white, because referees usually see things in black and white.
+Prefer a restrained academic colour palette. Use colour to encode meaning, keep the number of distinct colours small, and ensure categories remain distinguishable.
