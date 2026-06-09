@@ -10,7 +10,7 @@ A collection of Agent skills for software engineering research and development w
 |-------|-------------|
 | [ese-review](ese-review/) | Review a paper against ACM/SIGSOFT Empirical Standards |
 | [mh-writing](mh-writing/) | Write and improve SE research papers paragraph by paragraph (Mark Harman's guidelines) |
-| [ob-excalidraw](ob-excalidraw/) | Generate research diagrams using Excalidraw in Obsidian |
+| [excalidraw-diagram](excalidraw-diagram/) | Generate flowcharts and architecture diagrams as .excalidraw + PNG, with SVG icon support |
 | [rp-generate](rp-generate/) | Develop research ideas through adversarial dialogue, output structured proposals |
 
 ### Development Workflow
