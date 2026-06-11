@@ -43,6 +43,12 @@ A collection of Agent skills for software engineering research and development w
 |-------|-------------|
 | [weekly-report](weekly-report/) | Generate Quarto slide deck for supervisor meetings |
 
+### Documents
+
+| Skill | Description |
+|-------|-------------|
+| [md2gdoc](md2gdoc/) | Sync a local Markdown file with a Google Doc, both directions |
+
 ## References
 
 - [obra/superpowers](https://github.com/obra/superpowers) — The original skill collection that several skills in this repo were adapted from.
